@@ -28,7 +28,7 @@ module.exports = (app) => {
      * Get a Random tak
      * @route GET api/user/activity
     */
-    route.get('/activity', 
+    route.get('/random-activity', 
         async (req, res, next) => {
             try {
                 const randomTast = await ActivityService.getRandomActivity();
