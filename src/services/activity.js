@@ -23,6 +23,16 @@ const ActivityService = {
             throw err;
         }
     },
+
+    async getAllTasks() {
+        try {
+            const allActivities = await Activity.find();
+            return allActivities;
+        } catch (err) {
+            console.error(err);
+            throw err;
+        }
+    },
 }
 
 module.exports = ActivityService;

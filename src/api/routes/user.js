@@ -40,4 +40,19 @@ module.exports = (app) => {
         },
     );
 
+    /**
+     * Get all taks
+     * @route GET api/user/activities
+     */
+    route.get('/activities',
+        async(req, res, next) => {
+            try {
+                const allTaks = await ActivityService.getAllTasks();
+                return res.status(201).json(allTaks);
+            } catch (err) {
+                console.error('error: %o', err);
+                return next(err);
+            }
+        }
+    );
 };
