@@ -9,7 +9,7 @@ if (envFound.error) {
 }
 
 module.exports = {
-    port: parseInt(process.env.PORT, 10),
+    port: parseInt(process.env.PORT, 10) || 5000,
     databaseURL: process.env.MONGODB_URI,
     api: {
         prefix: '/api'
